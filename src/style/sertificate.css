@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Nunito,sans-serif;
+}
+:root{
+    --bg-color: #191f36;
+    --snd-bg-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+} 
+.sertificate{
+    background: var(--snd-bg-color);
+}
+.sertificate h2{
+    margin-bottom: 4rem;
+}
+.sertificate-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.sertificate-container .sertificate-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.sertificate-box img{
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+.sertificate-box:hover img{
+    transform: scale(1.1);
+}
+.sertificate-box .sertificate-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0,0,0,0.1), var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.sertificate-box:hover .sertificate-layer{
+    transform: translateY(0);
+}
+.sertificate-layer h4{
+    font-size: 3rem;
+}
+.sertificate-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+.sertificate-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.sertificate-layer a i{
+    font-size: 2rem;
+    color: var(--snd-bg-color);
+}
+@media(max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+} 
+@media(max-width: 991px){
+    .section{
+        padding: 10rem 3%;
+    }
+    .sertificate{
+        padding: 7rem;
+    }
+}
+@media(max-width: 786px){
+    .sertificate h2{
+        margin-bottom: 3rem;
+    }
+    .sertificate-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width: 617px){
+    .sertificate-container{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+} 
+ 
